@@ -12,10 +12,9 @@
 /* ========================================================== */
 
 /* Grid options */
-@column_width: 60; // Your column width
-@gutter_width: 48px; // Your gutter width
+@gutter_width: 40px; // Your gutter width
 @columns: 12; // The amount of columns you want
-@max_width: 1008px; // Set a maximum width
+@max_width: 1008px; // Set a maximum width of the site
 
 /**
  * Baseline
@@ -36,9 +35,11 @@
 @body_family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 @heading_family: "Open Sans Condensed", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
-@link: #557b96;
+/* Link colors */
+@link: #6bac60;
 @link_hover: #78aace;
 
+/* Select colors */
 @select: #78aace;
 @select_color: #fff;
 
@@ -46,6 +47,8 @@
 @grey_light: #ddd;
 @grey_regular: #ccc;
 @grey_dark: #666;
+
+@green: #6bac60;
 
 /* ========================================================== */
 /* = Import normalize baseline and grid                    = */
@@ -72,6 +75,7 @@ header#worlds_birth{
 		}
 		nav ul{
 			.grid-clearfix();
+			.column(12);
 			margin-bottom: 1.5em;
 			text-align: center;
 			font-weight:bold;
@@ -100,9 +104,75 @@ header#worlds_birth{
 		}
 		>aside{
 			.column(4);
+			>div:last-child{
+				p{
+					margin-bottom:0;
+				}
+				div:last-child p{
+					margin-bottom: 1.5em;
+				}
+			}
 		}
 		>div{
 			clear:both;
+			section{
+				background:#ccc;	
+				div{
+					background: #eee;
+					height: 3em;
+					margin-bottom: 1.5em;
+					border: @gutter_width*0.5 solid #ddd;
+					border-top:0;
+					border-bottom:0;
+				}
+				div:first-child{
+					background:@green;
+				}
+			}
+			section#one{
+				>div:first-child{.column(1);}
+				>div:last-child{.column(11);}
+			}
+			section#two{
+				>div:first-child{.column(2);}
+				>div:last-child{.column(10);}
+			}
+			section#three{
+				>div:first-child{.column(3);}
+				>div:last-child{.column(9);}
+			}
+			section#four{
+				>div:first-child{.column(4);}
+				>div:last-child{.column(8);}
+			}
+			section#five{
+				>div:first-child{.column(5);}
+				>div:last-child{.column(7);}
+			}
+			section#six{
+				>div:first-child{.column(6);}
+				>div:last-child{.column(6);}
+			}
+			section#seven{
+				>div:first-child{.column(7);}
+				>div:last-child{.column(5);}
+			}
+			section#eight{
+				>div:first-child{.column(8);}
+				>div:last-child{.column(4);}
+			}
+			section#nine{
+				>div:first-child{.column(9);}
+				>div:last-child{.column(3);}
+			}
+			section#ten{
+				>div:first-child{.column(10);}
+				>div:last-child{.column(2);}
+			}
+			section#eleven{
+				>div:first-child{.column(11);}
+				>div:last-child{.column(1);}
+			}
 		}
 	}
 }
@@ -115,7 +185,61 @@ header#worlds_birth{
 				.column(12);
 			}
 			>aside{
-				.column(12);
+				.column(12, 0);
+				>h2{
+					.column(12);
+					padding-top: 0.25em;
+				    margin-bottom: 0.5em;
+				}
+				div#lists{
+					>div{
+						.column(4);
+					}
+					ul, ol{
+						padding-left: 10%;
+					}
+				}
+				>div:last-child{
+					.column(12, 0);
+					>h2{
+						.column(12);
+						padding-top: 0.25em;
+					    margin-bottom: 0.5em;
+					}
+					>div{
+						.column(6);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 520px){
+	#content{
+		>div{
+			>aside{
+				div#lists{
+					>div{
+						.column(12);
+					}
+				}
+				>div:last-child{
+					>h2{
+						.column(12);
+						padding-top: 0.25em;
+					    margin-bottom: 0.5em;
+					}
+					>div{
+						.column(12);
+					}
+					p{
+						margin-bottom:0;
+					}
+					div:last-child p{
+						margin-bottom: 1.5em;
+					}
+				}
 			}
 		}
 	}

@@ -1,14 +1,15 @@
 /**
  * Grid
  *
- * Set up our responsive grid system.
+ * Set up responsive grid system.
+ * 
  * This is heavily infleuenced by the Semantic Grid http://semantic.gs
  *
  * @since 1.0
  */
 
 /* Utility variable — you should never need to modify this */
-@gridsystem_width: (@column_width*@columns) + (@gutter_width*@columns) * 1px;
+@gridsystem_width: @columns * 1px;
 @correction: 0.5 / @max_width * 100 * 1%;
 
 /* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
@@ -49,20 +50,20 @@
 
 	display: inline;
 	float: left;
-	width: 100%*(((@gutter_width+@column_width)*@x) / @gridsystem_width);
+	width: 100%*(@x / @gridsystem_width);
 	padding: 0 @padding;
 
 	//IE 6 & 7 Fix
-	*width: 100%*(((@gutter_width+@column_width)*@x) / @gridsystem_width)-@correction;
+	*width: 100%*((@x / @gridsystem_width)-@correction);
 	*padding: 0 (@padding)-@correction;
 }
 
 /* Push adds left padding */
 .push(@offset:1) {
-	padding-left: 100%*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
+	padding-left: 100%*(@offset / @gridsystem_width);
 }
 
 /* Pull adds right padding */
 .pull(@offset:1) {
-	padding-right: 100%*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
+	padding-right: 100%*(@offset / @gridsystem_width);
 }

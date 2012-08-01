@@ -120,7 +120,7 @@
 
 				<table>
 
-					<caption>Table caption</caption>
+					<caption>Tables have a little bit of default styling</caption>
 
 					<thead>
 					
@@ -234,150 +234,223 @@
 
 				<a name="forms"></a>
 				<h2>Forms</h2>
+
+				<p>Forms have a little bit of default styling too</p>
+
+				<form action="/" method="get">
+					
+					<fieldset>
+						
+						<legend>Your Details</legend>
+						
+						<ul>
+							
+							<li>
+								<label for="name">Name:</label>
+								<input type="text" id="name" name="name" value="" maxlength="100"><br>
+							</li>
+							
+							<li>
+								<label>Lunch:</label>
+								<label class="inline" for="pasta"><input type="radio" id="pasta" name="lunch" value="pasta"> Pasta</label>
+								<label class="inline" for="fish"><input type="radio" id="fish" name="lunch" value="fish"> Fish</label>
+							</li>
+							
+							<li>
+								<label>Drinks:</label>
+								<label class="inline" for="beer"><input type="checkbox" id="beer" name="drinks" value="beer"> Beer</label>
+								<label class="inline" for="wine"><input type="checkbox" id="wine" name="drinks" value="wine"> Wine</label>
+							</li>
+							
+							<li>
+								<label for="city">Preferred City:</label>
+								<select id="city" name="city">
+									<option value ="option">option</option>
+									<option value ="option">option</option>
+									<option value ="option">option</option>
+									<option value ="option">option</option>
+								</select>
+							</li>
+							
+							<li>
+								<label for="comments">Comments:</label>
+								<textarea id="comments" rows="3" cols="20" name="comments"></textarea>
+							</li>
+							
+							<li>
+								<input type="submit" value="Submit">
+							</li>
+
+						</ul>
+					
+					</fieldset>
+				
+				</form>
 			
 			</section>
 			
 			<aside>
+
+				<h2>List Types</h2>
 				
-				<div>
+				<div id="lists">
 					
-					<h2>List Types</h2>
+					<div>
+						
+						<h3>Ordered list</h3>
+						
+						<ol>
+						
+							<li>List item</li>
+						
+							<li>List item</li>
+						
+							<li>List item
+						
+								<ol>
+						
+									<li>List item level 2</li>
+						
+									<li>List item level 2
+						
+										<ol>
+						
+											<li>List item level 3</li>
+						
+											<li>List item level 3</li>
+						
+										</ol>
+						
+									</li>
+						
+								</ol>
+						
+							</li>
+						
+						</ol>
 					
-					<h3>Ordered list</h3>
+					</div>
 					
-					<ol>
+					<div>
+						
+						<h3>Unordered list</h3>
+						
+						<ul>
+						
+							<li>List item 01</li>
+						
+							<li>List item 02</li>
+						
+							<li>List item 03
+						
+								<ul>
+						
+									<li>List item level 2</li>
+						
+									<li>List item level 2
+						
+										<ul>
+						
+											<li>List item level 3</li>
+						
+											<li>List item level 3</li>
+						
+										</ul>
+						
+									</li>
+						
+								</ul>
+						
+							</li>
+						
+						</ul>
 					
-						<li>List item</li>
+					</div>
 					
-						<li>List item</li>
+					<div>
+						
+						<h3>Definition List</h3>
+						
+						<dl>
+						
+							<dt>Definition list title</dt>
+						
+							<dd>Definition list data</dd>
+						
+							<dt>Definition list title</dt>
+						
+							<dd>Definition list data</dd>
+						
+							<dt>Definition list title</dt>
+						
+							<dd>Definition list data</dd>
+						
+						</dl>
 					
-						<li>List item
-					
-							<ol>
-					
-								<li>List item level 2</li>
-					
-								<li>List item level 2
-					
-									<ol>
-					
-										<li>List item level 3</li>
-					
-										<li>List item level 3</li>
-					
-									</ol>
-					
-								</li>
-					
-							</ol>
-					
-						</li>
-					
-					</ol>
-				
+					</div>
+
 				</div>
 
 				<div>
 					
-					<h3>Unordered list</h3>
+					<h2>Other markup code</h2>
+					<div>
+						
+						<p>
+						
+							<a href="">hyperlink</a><br>
+							
+							<abbr title="title">abbreviation</abbr><br>
+												
+							<acronym>acronym (A)</acronym><br>
+							
+							<b>offset text typically styled in bold</b><br>
+							
+							<cite>cited title of a work</cite><br>
+							
+							<code>code fragment</code><br>
+							
+							<del>deleted text</del><br>
+							
+							<dfn title="title">defining instance</dfn><br>
+							
+							<em>emphatic stress</em><br>
+							
+							<i>offset text typically styled in italic</i><br>
+							
+							<ins>inserted text</ins><br>
 					
-					<ul>
+						</p>
 					
-						<li>List item 01</li>
+					</div>
 					
-						<li>List item 02</li>
+					<div>
+						
+						<p>
+							
+							<kbd>user input</kbd><br>
+							
+							<mark>marked (highlighted) text</mark><br>
+							
+							<samp>sample output</samp><br>
+							
+							<small>small print</small><br>
+							
+							<strong>strong importance</strong><br>
+							
+							<sup>superscript</sup> <sub>subscript</sub><br>
+							
+							<var>variable or placeholder text</var>
+
+						</p>
+
+						<address>contact information</address>
 					
-						<li>List item 03
+						<pre>preformatted text</pre>
 					
-							<ul>
-					
-								<li>List item level 2</li>
-					
-								<li>List item level 2
-					
-									<ul>
-					
-										<li>List item level 3</li>
-					
-										<li>List item level 3</li>
-					
-									</ul>
-					
-								</li>
-					
-							</ul>
-					
-						</li>
-					
-					</ul>
-				
+					</div>
+
 				</div>
-				
-				<div>
-					
-					<h3>Definition List</h3>
-					
-					<dl>
-					
-						<dt>Definition list title</dt>
-					
-						<dd>Definition list data</dd>
-					
-						<dt>Definition list title</dt>
-					
-						<dd>Definition list data</dd>
-					
-						<dt>Definition list title</dt>
-					
-						<dd>Definition list data</dd>
-					
-					</dl>
-				
-				</div>
-
-				<h2>Other markup code</h2>
-				<p>
-					<a href="">hyperlink</a><br>
-					
-					<abbr title="title">abbreviation</abbr><br>
-
-					<acronym>acronym (A)</acronym><br>
-					
-					<b>offset text typically styled in bold</b><br>
-					
-					<cite>cited title of a work</cite><br>
-					
-					<code>code fragment</code><br>
-					
-					<del>deleted text</del><br>
-					
-					<dfn title="title">defining instance</dfn><br>
-					
-					<em>emphatic stress</em><br>
-					
-					<i>offset text typically styled in italic</i><br>
-					
-					<ins>inserted text</ins><br>
-					
-					<kbd>user input</kbd><br>
-					
-					<mark>marked (highlighted) text</mark><br>
-					
-					<samp>sample output</samp><br>
-					
-					<small>small print</small><br>
-					
-					<strong>strong importance</strong><br>
-					
-					<sup>superscript</sup> <sub>subscript</sub><br>
-					
-					<var>variable or placeholder text</var>
-
-				</p>
-				
-				<address>contact information</address>
-				
-				<pre>preformatted text</pre>
 			
 			</aside>
 
@@ -386,7 +459,93 @@
 				<a name="grid"></a>
 				<h2>Grid</h2>
 
-				
+				<section id="one">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="two">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="three">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="four">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="five">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="six">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="seven">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="eight">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="nine">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="ten">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
+
+				<section id="eleven">
+					
+					<div></div>
+
+					<div></div>
+
+				</section>
 
 			</div>
 
