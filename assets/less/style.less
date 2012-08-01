@@ -1,0 +1,98 @@
+/**
+ * Responsable Grid System
+ *
+ * Setting up a responsive grid based on Semantic GS
+ *
+ * @author Abban Dunne http://abandon.ie
+ * @version 1.0
+ */
+
+/* ========================================================== */
+/* = Site Variables                                         = */
+/* ========================================================== */
+
+/* Grid options */
+@column_width: 60; // Your column width
+@gutter_width: 48px; // Your gutter width
+@columns: 12; // The amount of columns you want
+@max_width: 1008px; // Set a maximum width
+
+/**
+ * Baseline
+ * 
+ * Common settings for this:
+ * 
+ * 100% for 16px font and 24px baseline.
+ * 
+ * 75% for 12px font and 18px baseline.
+ * 
+ */
+@baseline: 100%;
+
+/* Font variables */
+@body_color: #333;
+@heading_color: #111;
+
+@body_family: Georgia, "Times New Roman", Times, Serif;
+@heading_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+
+@links: #78aace;
+@links_hover: #557b96;
+
+@select: #78aace;
+@select_color: #fff;
+
+/* Default Colors */
+@grey_light: #ddd;
+@grey_regular: #ccc;
+@grey_dark: #666;
+
+/* ========================================================== */
+/* = Import normalize, baseline and grid                    = */
+/* ========================================================== */
+
+@import "normalize.less";
+@import "grid.less";
+@import "typography.less";
+
+/* ========================================================== */
+/* = Your custom styles go here                             = */
+/* ========================================================== */
+
+body{
+	background: url(../images/bg.png);
+}
+
+header#worlds_birth{
+	>div{
+		.row();
+		hgroup{
+			.column(12);
+		}
+	}
+}
+
+#content{
+	>div{
+		.row();
+		background:#999;
+		>section{
+			.column(8);
+			background:#ccc;
+			>div{
+				height: 50px;
+				background:#eee;
+				.column(4, 20px, 8);
+			}
+		}
+		>aside{
+			.column(4);
+			background:#ddd;
+		}
+	}
+}
+
+
+
+
+
