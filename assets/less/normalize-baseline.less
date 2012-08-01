@@ -1,5 +1,8 @@
 /**
- * Normalize
+ * Normalize with Baseline Grid
+ *
+ * Makes elements consistent across browsers, sets up some decent
+ * default css styles and a baseline grid.
  *
  * Adapted from http://github.com/necolas/normalize.css
  *
@@ -61,9 +64,9 @@ audio:not([controls]) {
     display: none;
 }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/* ========================================================== */
+/* = Base                                                   = */
+/* ========================================================== */
 
 /*
  * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
@@ -73,7 +76,7 @@ audio:not([controls]) {
  */
 
 html {
-    font-size: 100%; /* 1 */
+    font-size: 100.01%; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
 }
@@ -97,11 +100,54 @@ textarea {
 
 body {
     margin: 0;
+    ont-size: @baseline;
+    color: @body_color;
+    line-height: 1.5em;
+    font-family: @body_family;
+    text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
+/* ========================================================== */
+/* = Selection                                              = */
+/* ========================================================== */
+
+::selection{
+    background: @select;
+    color: @select_color;
+}
+::-moz-selection{
+    background: @select;
+    color: @select_color;
+}
+img::selection{
+    background: transparent;
+}
+img::-moz-selection{
+    background: transparent;
+}
+body{
+    -webkit-tap-highlight-color: @select;
+}
+
+/* ========================================================== */
+/* = Links                                                  = */
+/* ========================================================== */
+
+/*
+ * Sets up color and transition.
+ */
+
+a{
+    text-decoration: none;
+    color:@link;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
 
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
@@ -114,32 +160,81 @@ a:focus {
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  * people.opera.com/patrickl/experiments/keyboard/test
+ *
+ * Sets up link hover color
  */
 
 a:active,
 a:hover {
+    color: @link_hover;
     outline: 0;
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
+/* ========================================================== */
+/* = Typography                                             = */
+/* ========================================================== */
 
 /*
  * Addresses font sizes and margins set differently in IE6/7.
  * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ * Sets up baseline.
  */
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    font-weight: bold;
+    font-family: @heading_family;
+    color: @heading_color;
+}
+
+h1{
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+h2{
+    font-size: 2em;
+    padding-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+h3{
+    font-size: 1.5em;
+    line-height: 1;
+    padding-top: 0.35em;
+    margin-bottom: 0.65em;
+}
+h4{
+    font-size: 1.2em;
+    line-height: 1.25;
+    padding-top: 0.45em;
+    margin-bottom: 0.8em;
+}
+h5{
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 0.6em;
+    margin-bottom: 0.9em;
+}
+h6{
+    font-size: 1em;
+    font-weight: bold;
 }
 
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
  */
 
-abbr[title] {
-    border-bottom: 1px dotted;
+abbr[title], 
+acronym{
+    border-bottom: 1px dotted @grey_light;
+}
+
+/*
+ * Addresses margin on address. Needs browser testing
+ */
+address{
+    margin: 0 0 1.5em;
+    //font-style: italic;
 }
 
 /*
@@ -152,33 +247,49 @@ strong {
 }
 
 blockquote {
-    margin: 1em 40px;
+    margin: 0 1.5em 1.5em;
+    font-style: italic;
 }
 
 /*
  * Addresses styling not present in S5, Chrome.
  */
 
-dfn {
+em,
+dfn{
     font-style: italic;
+}
+dfn {
+    font-weight: bold;
 }
 
 /*
  * Addresses styling not present in IE6/7/8/9.
  */
 
-mark {
-    background: #ff0;
-    color: #000;
+mark{
+    line-height: 1.5;
+    background: @select;
+    color: @select_color;
 }
 
 /*
- * Addresses margins set differently in IE6/7.
+ * Addresses margins set differently in IE6/7. Sets up baseline.
  */
 
-p,
+p{
+    margin: 0 0 1.5em;
+}
 pre {
-    margin: 1em 0;
+    white-space: pre;
+}
+
+/*
+ * Fades del.
+ */
+
+del{
+    color:@grey_light;
 }
 
 /*
@@ -190,9 +301,10 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
+    font-family: 'andale mono', 'lucida console', monospace, serif;
     _font-family: 'courier new', monospace;
     font-size: 1em;
+    line-height: 1.5;
 }
 
 /*
@@ -223,8 +335,10 @@ q:after {
     content: none;
 }
 
-small {
+ins,
+small{
     font-size: 75%;
+    line-height: 1.5;
 }
 
 /*
@@ -248,33 +362,81 @@ sub {
     bottom: -0.25em;
 }
 
+/*
+ * Set line height for kbd and samp
+ */
+
+kbd,
+samp{
+    line-height: 1.4;
+}
+
+/*
+ * Styling for horizontal rules
+ */
+hr {
+    background: @grey_regular;
+    color: @grey_regular;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 1.45em;
+    border: none;
+}
+
+
 /* ==========================================================================
    Lists
    ========================================================================== */
 
 /*
  * Addresses margins set differently in IE6/7.
- */
-
-dl,
-menu,
-ol,
-ul {
-    margin: 1em 0;
-}
-
-dd {
-    margin: 0 0 0 40px;
-}
-
-/*
  * Addresses paddings set differently in IE6/7.
  */
 
 menu,
 ol,
 ul {
-    padding: 0 0 0 40px;
+    margin: 0 1.5em 1.5em 0;
+}
+
+menu,
+ul,
+ol{
+    padding-left: 1.5em;
+}
+
+dl{
+    margin: 0 0 1.5em 0;
+}
+
+dl dt{
+    font-weight: bold;
+}
+
+dd{
+    margin-left: 1.5em;
+}
+
+/*
+ * Consistent list styles
+ */
+
+ul{
+    list-style-type: disc;
+}
+ol{
+    list-style-type: decimal;
+}
+
+/*
+ * Remove margins from li elements
+ */
+
+li ul,
+li ol{
+    margin: 0;
 }
 
 /*
@@ -474,9 +636,42 @@ textarea {
 
 /*
  * Remove most spacing between table cells.
+ * Some base styling for tables.
  */
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    margin-bottom: 1.4em;
+    width:100%;
+    border: 1px solid @grey_regular;
+}
+thead{
+    text-align:left;
+    font-weight: bold;
+}
+tbody{
+    tr:nth-child(even) td{
+        background: @grey_light;
+    }
+}
+tfoot{
+    font-style: italic;
+}
+tfoot td, th{
+    padding: .75em 10px;
+}
+th,td,caption{
+    border: 1px solid @grey_regular;
+}
+td{
+    padding: 0 10px 0 10px;
+    line-height: 1.45em;
+}
+caption{
+    border-bottom:0;
+    padding: .75em 10px;
+    line-height: 1.45em;
+    text-align:left;
+    font-style: italic;
 }
