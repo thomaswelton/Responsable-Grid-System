@@ -1,5 +1,5 @@
 /**
- * Typography
+ * Baseline
  *
  * Sets up some decent default css styles and a baseline grid.
  *
@@ -60,22 +60,26 @@ h1{
 }
 h2{
 	font-size: 2em;
-	margin-bottom: 0.75em;
+	padding-top: 0.25em;
+	margin-bottom: 0.5em;
 }
 h3{
 	font-size: 1.5em;
 	line-height: 1;
-	margin-bottom: 1em;
+	padding-top: 0.35em;
+	margin-bottom: 0.65em;
 }
 h4{
 	font-size: 1.2em;
 	line-height: 1.25;
-	margin-bottom: 1.25em;
+	padding-top: 0.45em;
+	margin-bottom: 0.8em;
 }
 h5{
 	font-size: 1em;
 	font-weight: bold;
-	margin-bottom: 1.5em;
+	padding-top: 0.6em;
+	margin-bottom: 0.9em;
 }
 h6{
 	font-size: 1em;
@@ -93,11 +97,11 @@ p{
 
 a:focus, 
 a:hover{
-	color: @links;
+	color: @link;
 }
 a{
 	text-decoration: none;
-	color:@links_hover;
+	color:@link_hover;
 	-webkit-transition:all .2s linear;
 	-moz-transition:all .2s linear;
 	-o-transition:all .2s linear;
@@ -105,7 +109,7 @@ a{
 }
 
 blockquote{
-	margin: 1.5em;
+	margin: 0 1.5em 1.5em;
 	font-style: italic;
 }
 strong{
@@ -134,7 +138,6 @@ address{
 del{
 	color:@grey_light;
 }
-
 pre{
 	margin: 1.5em 0;
 	white-space: pre;
@@ -145,10 +148,22 @@ tt{
 	font: 1em 'andale mono', 'lucida console', monospace;
 	line-height: 1.5;
 }
-
+ins,
+small{
+	line-height: 1.5;
+}
+kbd,
+samp{
+	line-height: 1.4;
+}
+mark{
+	line-height: 1.5;
+	background: @select;
+	color: @select_color;
+}
 hr {
-	background: @grey_light;
-	color: @grey_light;
+	background: @grey_regular;
+	color: @grey_regular;
 	clear: both;
 	float: none;
 	width: 100%;

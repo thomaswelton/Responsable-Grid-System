@@ -33,11 +33,11 @@
 @body_color: #333;
 @heading_color: #111;
 
-@body_family: Georgia, "Times New Roman", Times, Serif;
-@heading_family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@body_family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+@heading_family: "Open Sans Condensed", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
-@links: #78aace;
-@links_hover: #557b96;
+@link: #557b96;
+@link_hover: #78aace;
 
 @select: #78aace;
 @select_color: #fff;
@@ -53,14 +53,14 @@
 
 @import "normalize.less";
 @import "grid.less";
-@import "typography.less";
+@import "baseline.less";
 
 /* ========================================================== */
 /* = Your custom styles go here                             = */
 /* ========================================================== */
 
 body{
-	background: url(../images/bg.png);
+	background: url(../images/bg.png) 0 2px;
 }
 
 header#worlds_birth{
@@ -68,6 +68,27 @@ header#worlds_birth{
 		.row();
 		hgroup{
 			.column(12);
+			padding-top: 1.5em;
+			margin-bottom: 2px; // Figure out 2px weirdness with hgroups
+		}
+		nav ul{
+			.grid-clearfix();
+			margin-bottom: 1.5em;
+			text-align: center;
+			font-weight:bold;
+			li{
+				.column(3, 0);
+				a{
+					display:block;
+					background: @link;
+					padding: .75em 0;
+					border-right: 1px solid #fff;
+					color:#fff;
+					&:hover, &:focus{
+						background:@link_hover;
+					}
+				}
+			}
 		}
 	}
 }
@@ -75,24 +96,27 @@ header#worlds_birth{
 #content{
 	>div{
 		.row();
-		background:#999;
 		>section{
 			.column(8);
-			background:#ccc;
-			>div{
-				height: 50px;
-				background:#eee;
-				.column(4, 20px, 8);
-			}
 		}
 		>aside{
 			.column(4);
-			background:#ddd;
 		}
 	}
 }
 
 
-
+@media screen and (max-width: 750px){
+	#content{
+		>div{
+			>section{
+				.column(12);
+			}
+			>aside{
+				.column(12);
+			}
+		}
+	}
+}
 
 

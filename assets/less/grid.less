@@ -2,18 +2,16 @@
  * Grid
  *
  * Set up our responsive grid system.
+ * This is heavily infleuenced by the Semantic Grid http://semantic.gs
  *
  * @since 1.0
  */
 
-// Utility variable — you should never need to modify this
+/* Utility variable — you should never need to modify this */
 @gridsystem_width: (@column_width*@columns) + (@gutter_width*@columns) * 1px;
-
-@total_width: 100%;
-
 @correction: 0.5 / @max_width * 100 * 1%;
 
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
 .grid-clearfix(){
 	*zoom:1;
 	
@@ -27,36 +25,44 @@
 	}
 }
 
-/* ensure grid columns are set to border-boxes. This is essential */
+/* Ensure grid columns are set to border-boxes. This is essential */
 .border-box(){
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box; 
 	box-sizing: border-box; 
 }
 
-.row(){
+/* Our row container */
+.row(@padding:0){
+	.grid-clearfix();
+	.border-box();
+
 	display:block;
 	max-width: @max_width;
 	margin: 0 auto;
-	.grid-clearfix();
+	padding:0 @padding;
 }
 
+/* Our column container */
 .column(@x, @padding:(@gutter_width*0.5), @columns:@columns){
 	.border-box();
 
 	display: inline;
 	float: left;
-	width: @total_width*(((@gutter_width+@column_width)*@x) / @gridsystem_width);
+	width: 100%*(((@gutter_width+@column_width)*@x) / @gridsystem_width);
 	padding: 0 @padding;
 
 	//IE 6 & 7 Fix
-	*width: @total_width*(((@gutter_width+@column_width)*@x) / @gridsystem_width)-@correction;
+	*width: 100%*(((@gutter_width+@column_width)*@x) / @gridsystem_width)-@correction;
 	*padding: 0 (@padding)-@correction;
 }
 
+/* Push adds left padding */
 .push(@offset:1) {
-	padding-left: @total_width*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
+	padding-left: 100%*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
 }
+
+/* Pull adds right padding */
 .pull(@offset:1) {
-	padding-right: @total_width*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
+	padding-right: 100%*(((@gutter_width+@column_width)*@offset) / @gridsystem_width) + @total_width*((@gutter_width*.5)/@gridsystem_width);
 }
