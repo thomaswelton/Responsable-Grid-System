@@ -75,6 +75,16 @@
 
 				<p>Here, it must needs be said, that accidents like this have in more than one case occurred to ships in violent storms. The magnetic energy, as developed in the mariner's needle, is, as all know, essentially one with the electricity beheld in heaven; hence it is not to be much marvelled at, that such things should be. Instances where the lightning has actually struck the vessel, so as to smite down some of the spars and rigging, the effect upon the needle has at times been still more fatal; all its loadstone virtue being annihilated, so that the before magnetic steel was of no more use than an old wife's knitting needle. But in either case, the needle never again, of itself, recovers the original virtue thus marred or lost; and if the binnacle compasses be affected, the same fate reaches all the others that may be in the ship; even were the lowermost one inserted into the kelson.</p>
 
+				<figure class="responsive" data-media="http://placehold.it/300x96" data-media440="http://placehold.it/440x172" data-media600="http://placehold.it/632x240" title="A Half Brained Idea">
+					
+					<noscript>
+						<img src="http://placehold.it/632x240">
+					</noscript>
+
+					<figcaption>Check out the responsive images</figcaption>
+
+				</figure>
+
 				<p><pre>Deliberately standing before the binnacle, and eyeing the transpointed compasses, the old man, with the sharp of his extended hand, now took the precise bearing of the sun, and satisfied that the needles were exactly inverted, shouted out his orders for the ship's course to be changed accordingly. The yards were hard up; and once more the Pequod thrust her undaunted bows into the opposing wind, for the supposed fair one had only been juggling her.</pre></p>
 
 				<h2>Subtitle &mdash; h2</h2>
@@ -241,17 +251,17 @@
 					
 					<fieldset>
 						
-						<legend>Your Details</legend>
+						<legend>Form Elements</legend>
 						
 						<ul>
 							
 							<li>
 								<label for="name">Name:</label>
-								<input type="text" id="name" name="name" value="" maxlength="100"><br>
+								<input type="text" id="name" name="name" value="" maxlength="100" placeholder="First name, last name..">
 							</li>
 							
 							<li>
-								<label>Lunch:</label>
+								<label>Lunchy:</label>
 								<label class="inline" for="pasta"><input type="radio" id="pasta" name="lunch" value="pasta"> Pasta</label>
 								<label class="inline" for="fish"><input type="radio" id="fish" name="lunch" value="fish"> Fish</label>
 							</li>
@@ -271,14 +281,84 @@
 									<option value ="option">option</option>
 								</select>
 							</li>
+
+							<li>
+								<label for="form_url">Url:</label>
+							    <input name="form_url" id="form_url" type="url" list="url_list" placeholder="http://">
+							    <datalist id="url_list">
+							        <option value="http://www.google.com" label="Google">
+							        <option value="http://www.nettuts.com" label="NetTuts">
+							    </datalist>
+							</li>
+
+							<li>
+								<label for="form_range">Range:</label>
+								<input name="form_range" id="form_range" type="range" min="1" max="10" step=".5" value="5" >
+							</li>
+
+							<li>
+								<label for="form_number">Number:</label>
+								<input name="form_number" id="form_number" type="number" min="1" max="10" >
+							</li>
+
+							<li>
+								<label for="form_date">Date:</label>
+								<input name="form_date" id="form_date" type="date">
+							</li>
+
+						    <li>
+						    	<label for="form_month">Month:</label>
+						    	<input name="form_month" id="form_month" type="month">
+						    </li>
+
+						    <li>
+						    	<label for="form_week">Week:</label>
+						    	<input name="form_week" id="form_week" type="week">
+						    </li>
+
+						    <li>
+						    	<label for="form_time">Time:</label>
+						    	<input name="form_time" id="form_time" type="time">
+						    </li>
+
+						    <li>
+						    	<label for="form_datetime_local">Local Time:</label>
+						    	<input name="form_datetime_local" id="form_datetime_local" type="datetime-local">
+						    </li>
+
+						    <li>
+						    	<label for="email">Email:</label>
+						    	<input name="form_email" id="form_email" type="email" list="email_list" multiple>
+						    	<datalist id="url_list">
+						    	    <option value="jane.doe@test.com" label="Jane Doe">
+						    	    <option value="john.doe@test.com" label="John Doe">
+						    	</datalist>
+						    </li>
+
+						    <li>
+						    	<label for="form_telephone">Phone:</label>
+						    	<input name="form_telephone" id="form_telephone" type="telephone">
+						    </li>
+
+						    <li>
+						    	<label for="form_color">Color:</label>
+						    	<input name="form_color" id="form_color" type="color">
+						    </li>
+
+						    <li>
+						    	<label>Progress &amp; Meter</label>
+						    	<progress id="p" max=100>0% </progress>
+							    <meter min=0 max=20 value=12 optimum=10>12cm </meter>
+						    </li>
 							
 							<li>
 								<label for="comments">Comments:</label>
-								<textarea id="comments" rows="3" cols="20" name="comments"></textarea>
+								<textarea id="comments" rows="3" cols="20" name="comments" placeholder="Blah, blah, blah.."></textarea>
 							</li>
 							
 							<li>
 								<input type="submit" value="Submit">
+								<input type="button" value="Cancel">
 							</li>
 
 						</ul>
@@ -456,95 +536,103 @@
 
 			<div>
 				
-				<a name="grid"></a>
-				<h2>Grid</h2>
+				<div>
+					
+					<a name="grid"></a>
+					<h2>Grid Sample</h2>
+				
+				</div>
+
+				<section id="thirds">
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
+
+				<section id="quarters">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
+
+				<section id="sixths">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
+
+				<section id="twelfths">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
 
 				<section id="one">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="two">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="three">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="four">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="five">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="six">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="seven">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="eight">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="nine">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="ten">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 				<section id="eleven">
-					
 					<div></div>
-
 					<div></div>
-
 				</section>
 
 			</div>

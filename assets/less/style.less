@@ -115,18 +115,33 @@ header#worlds_birth{
 		}
 		>div{
 			clear:both;
+			>div{
+				.column(12);
+			}
 			section{
 				background:#ccc;	
 				div{
-					background: #eee;
+					background: @green;
 					height: 3em;
 					margin-bottom: 1.5em;
 					border: @gutter_width*0.5 solid #ddd;
 					border-top:0;
 					border-bottom:0;
 				}
-				div:first-child{
-					background:@green;
+			}
+			section#one,
+			section#two,
+			section#three,
+			section#four,
+			section#five,
+			section#six,
+			section#seven,
+			section#eight,
+			section#nine,
+			section#ten,
+			section#eleven{
+				div:last-child{
+					background:#eee;
 				}
 			}
 			section#one{
@@ -172,6 +187,18 @@ header#worlds_birth{
 			section#eleven{
 				>div:first-child{.column(11);}
 				>div:last-child{.column(1);}
+			}
+			section#thirds{
+				>div{.column(4);}
+			}
+			section#quarters{
+				>div{.column(3);}
+			}
+			section#sixths{
+				>div{.column(2);}
+			}
+			section#twelfths{
+				>div{.column(1);}
 			}
 		}
 	}
