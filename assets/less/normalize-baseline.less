@@ -14,7 +14,7 @@
 *{ 
    -webkit-box-sizing: border-box; 
    -moz-box-sizing: border-box; 
-   box-sizing: border-box; 
+   box-sizing: border-box; *behavior: url(/assets/js/libs/boxsizing.htc);
 }
 
 // Corrects `block` display not defined in IE6/7/8/9 & FF3.
@@ -100,7 +100,7 @@ textarea {
 
 body {
     margin: 0;
-    ont-size: @baseline;
+    font-size: @baseline;
     color: @body_color;
     line-height: 1.5em;
     font-family: @body_family;
@@ -603,7 +603,7 @@ input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
+    box-sizing: border-box; *behavior: url(/assets/js/libs/boxsizing.htc); /* 1 */
     padding: 0; /* 2 */
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
