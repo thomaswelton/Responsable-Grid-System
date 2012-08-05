@@ -1,56 +1,59 @@
-/**
- * Responsable Grid System
- *
- * Setting up a responsive grid based on Semantic GS
- *
- * @author Abban Dunne http://abandon.ie
- * @version 1.0
- */
+/*
+* Responsable Grid System
+*
+* Setting up a responsive grid based on Semantic GS
+*
+* @author Abban Dunne http://abandon.ie
+* @version 1.0
+*
+* WARNING: This stylesheet is compiled from SCSS files located in assets/scss/ directory
+*
+*/
 
-/* ========================================================== */
-/* = Site Variables                                         = */
-/* ========================================================== */
+// ==========================================================
+// = Site Variables                                         =
+// ==========================================================
 
-/* Grid options */
+// Grid options =
 $gutter_width: 40px; // Your gutter width
 $columns: 12; // The amount of columns you want
 $max_width: 1008px; // Set a maximum width of the site
 
-/**
- * Baseline
- * 
- * Common settings for this:
- * 
- * 100% for 16px font and 24px baseline.
- * 
- * 75% for 12px font and 18px baseline.
- * 
- */
+// *
+// * Baseline
+// * 
+// * Common settings for this:
+// * 
+// * 100% for 16px font and 24px baseline.
+// * 
+// * 75% for 12px font and 18px baseline.
+// * 
+// *
 $baseline: 100%;
 
-/* Font variables */
+// Font variables
 $body_color: #333;
 $heading_color: #111;
 
 $body_family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 $heading_family: "Open Sans Condensed", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
-/* Link colors */
+// Link colors
 $link: #6bac60;
 $link_hover: #78aace;
 
-/* Select colors */
+// Select colors
 $select: #78aace;
 $select_color: #fff;
 
-/* Default Colors */
+// Default Colors
 $grey_light: #ddd;
 $grey_regular: #ccc;
 $grey_dark: #666;
 
 $green: #6bac60;
 
-/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack
 @mixin grid-clearfix(){
 	*zoom:1;
 	
@@ -64,16 +67,16 @@ $green: #6bac60;
 	}
 }
 
-/* ========================================================== */
-/* = Import normalize baseline and grid                    = */
-/* ========================================================== */
+// ==========================================================
+// = Import normalize baseline and grid                     =
+// ==========================================================
 
 @import "normalize-baseline.scss";
 @import "grid.scss";
 
-/* ========================================================== */
-/* = Your custom styles go here                             = */
-/* ========================================================== */
+// ==========================================================
+// = Your custom styles go here                             =
+// ==========================================================
 
 body{
 	background: url(../images/bg.png) 0 2px;

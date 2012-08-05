@@ -1,34 +1,15 @@
-/**
- * Responsable Grid System
- *
- * Setting up a responsive grid based on Semantic GS
- *
- * @author Abban Dunne http://abandon.ie
- * @version 1.0
- */
-/* ========================================================== */
-/* = Site Variables                                         = */
-/* ========================================================== */
-/* Grid options */
-/**
- * Baseline
- * 
- * Common settings for this:
- * 
- * 100% for 16px font and 24px baseline.
- * 
- * 75% for 12px font and 18px baseline.
- * 
- */
-/* Font variables */
-/* Link colors */
-/* Select colors */
-/* Default Colors */
-/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
-/* ========================================================== */
-/* = Import normalize baseline and grid                    = */
-/* ========================================================== */
-/**
+/*
+* Responsable Grid System
+*
+* Setting up a responsive grid based on Semantic GS
+*
+* @author Abban Dunne http://abandon.ie
+* @version 1.0
+*
+* WARNING: This stylesheet is compiled from SCSS files located in assets/scss/ directory
+*
+*/
+/*
  * Normalize with Baseline Grid
  *
  * Makes elements consistent across browsers, sets up some decent
@@ -826,24 +807,6 @@ caption {
   font-style: italic;
 }
 
-/**
- * Grid
- *
- * Set up responsive grid system.
- * 
- * This is heavily infleuenced by the Semantic Grid http://semantic.gs
- *
- * @version 1.0
- */
-/* Utility variable — you should never need to modify this */
-/* Ensure grid columns are set to border-boxes. This is essential */
-/* Our row container */
-/* Our column container */
-/* Push adds left padding */
-/* Pull adds right padding */
-/* ========================================================== */
-/* = Your custom styles go here                             = */
-/* ========================================================== */
 body {
   background: url(../images/bg.png) 0 2px;
 }
