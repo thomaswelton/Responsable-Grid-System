@@ -1,13 +1,15 @@
-/*
- * Normalize with Baseline Grid
- *
- * Makes elements consistent across browsers, sets up some decent
- * default css styles and a baseline grid.
- *
- * Adapted from http://github.com/necolas/normalize.css
- *
- * @version 1.0
- */
+// *
+// * Normalize with Baseline Grid
+// *
+// * Makes elements consistent across browsers, sets up some decent
+// * default css styles and a baseline grid.
+// *
+// * Adapted from http://github.com/necolas/normalize.css
+// * 
+// * @author Abban Dunne http://abandon.ie
+// * @author James Wilson http://jimmynotjim.com
+// * @version 1.0
+// */
 
 // Box sizing to make life easier with % layouts
 
@@ -315,6 +317,7 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
+    overflow-x:auto;
 }
 
 /*
