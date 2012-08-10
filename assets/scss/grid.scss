@@ -11,6 +11,7 @@
 
 // Utility variable — you should never need to modify this
 $gridsystem_width: $columns * 1px;
+$padding:$gutter_width*0.5;
 //$correction: 0.5 / $max_width * 100 * 1%; // NOTE: Check this in IE
 
 // Ensure grid columns are set to border-boxes. This is essential
@@ -32,7 +33,7 @@ $gridsystem_width: $columns * 1px;
 }
 
 // Our column container
-@mixin column($x, $padding:($gutter_width*0.5), $columns:$columns){
+@mixin column($x, $padding:$padding, $columns:$columns){
 	@include border-box();
 
 	display: inline;
