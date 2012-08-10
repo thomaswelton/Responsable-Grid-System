@@ -37,7 +37,7 @@ $gridsystem_width: $columns * 1px;
 
 	display: inline;
 	float: left;
-	width: 100%*(($x / $gridsystem_width)*1px);
+	width: 100%*(($x / $columns);
 	padding: 0 $padding;
 
 	//IE 6 & 7 Fix
@@ -46,11 +46,11 @@ $gridsystem_width: $columns * 1px;
 }
 
 // Push adds left padding
-@mixin push($offset:1) {
-	padding-left: 100%*($offset / $gridsystem_width);
+@mixin push($offset:1, $columns:$columns) {
+	margin-left: 100%*($offset / $columns);
 }
 
 // Pull adds right padding
-@mixin pull($offset:1) {
-	padding-right: 100%*($offset / $gridsystem_width);
+@mixin pull($offset:1, $columns:$columns) {
+	margin-right: 100%*($offset / $columns);
 }
