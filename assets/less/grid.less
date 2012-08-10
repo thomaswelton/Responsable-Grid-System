@@ -12,6 +12,7 @@
 
 /* Utility variable — you should never need to modify this */
 @gridsystem_width: @columns * 1px;
+@padding:$gutter_width*0.5;
 @correction: 0.5 / @max_width * 100 * 1%; // NOTE: CHeck this in IE
 
 /* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
@@ -47,7 +48,7 @@
 }
 
 /* Our column container */
-.column(@x, @padding:(@gutter_width*0.5), @columns:@columns){
+.column(@x, @padding:@padding, @columns:@columns){
 	.border-box();
 
 	display: inline;
