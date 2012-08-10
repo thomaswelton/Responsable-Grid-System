@@ -37,7 +37,7 @@ $gridsystem_width: $columns * 1px;
 
 	display: inline;
 	float: left;
-	width: 100%*(($x / $gridsystem_width)*1px);
+	width: 100%*(($x / $columns);
 	padding: 0 $padding;
 
 	//IE 6 & 7 Fix
