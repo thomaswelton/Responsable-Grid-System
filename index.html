@@ -27,28 +27,6 @@
 
 	<script src="assets/js/script-ck.js"></script>
 
-	<script type="text/javascript">
-
-		Modernizr.addTest("boxsizing", function(){
-			return Modernizr.testAllProps("boxSizing") && (document.documentMode === undefined || document.documentMode > 7);
-		});
-
-		$(function(){
-		    if(!($('html').hasClass('boxsizing')) ){
-		        $('*').each(function(){
-		        	var f, a, d, n;
-		            f = $(this).outerWidth();
-	                a = $(this).width();
-	                d = f - a;
-	                n = a - d;
-		 
-		            $(this).css('width', n);
-		        });
-		    }
-		});
-
-	</script>
-
 </head>
 
 <body>
