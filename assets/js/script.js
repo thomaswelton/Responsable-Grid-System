@@ -24,6 +24,9 @@ $(function(){
 	}
 });
 
+/**
+ * Make images responsive using jQuery Picture
+ */
 $(function(){
 	$('figure.responsive').picture({ container : $('#content') });
 });

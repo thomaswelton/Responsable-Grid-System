@@ -22,10 +22,11 @@
 
 		var defaults = {
 
-			container : null
+			container : null,
+			ignorePixelRatio: false
 
         };
-
+		
 		var settings = $.extend({}, defaults, args);
 
 		this.each(function(){
@@ -36,24 +37,24 @@
 
 			// Check the device pixel ratio
 			var PixelRatio = 1;
-			if(window.devicePixelRatio !== undefined) PixelRatio = window.devicePixelRatio;
+			if(!settings.ignorePixelRatio && window.devicePixelRatio !== undefined) PixelRatio = window.devicePixelRatio;
 
 			// Save off the element so it can be easily used inside a function
 			element = $(this);
-
+			
 			// Initialise the images
 			getCurrentMedia(true);
 
 			// Only call the image resize function 200ms after window stops being resized
 			timeoutOffset = false;
-
+			
 			$(window).resize(function(){
-
+				
 				if(timeoutOffset !== false)
 					clearTimeout(timeoutOffset);
-
+				
 				timeoutOffset = setTimeout(getCurrentMedia, 200);
-
+			
 			});
 
 
@@ -67,7 +68,7 @@
 			function getCurrentMedia(init){
 
 				if(init){
-
+					
 					if(element.get(0).tagName.toLowerCase() == 'figure'){
 
 						var mediaObj = element.data();
@@ -105,21 +106,21 @@
 				}
 
 				var c = 0;
-
+				
 				// Check if user defined container, otherwise take window
 				if (settings.container == null){
-
+				
 					windowWidth = ($(window).width()) * PixelRatio;
-
+				
 				}else{
-
+				
 					windowWidth = ($(settings.container).width()) * PixelRatio;
-
+				
 				}
 
 				// Set the c variable to the current media width
 				$.each(breakpoints, function(i,v){
-
+					
 					if(parseInt(windowWidth) >= parseInt(v) && parseInt(c) <= parseInt(v))
 						c = v;
 
@@ -167,18 +168,18 @@
 
 					var prep = '<img src="' + sizes[currentMedia] + '" style="' + element.attr('style') + '" alt="' + element.attr('alt') + '">';
 
-					if(element.find('a').length == 0){
+					if($('>a', element).length == 0){
 
 						element.append(prep);
 
 					}else{
 
-						element.find('a').append(prep);
+						$('>a', element).append(prep);
 
 					}
 
 				}else{
-
+					
 					element.find('img').attr('src', sizes[currentMedia]);
 
 				}
@@ -216,13 +217,13 @@
 
 					var prep = '<img src="' + sizes[currentMedia] + '" alt="' + element.attr('title') + '">';
 
-					if(element.find('a').length == 0){
+					if($('>a', element).length == 0){
 
-						element.prepend(prep);
+						element.append(prep);
 
 					}else{
 
-						element.find('a').prepend(prep);
+						$('>a', element).append(prep);
 
 					}
 
