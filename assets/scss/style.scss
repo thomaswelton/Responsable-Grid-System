@@ -69,7 +69,8 @@ $green: #6bac60;
 // = Import normalize baseline and grid                     =
 // ==========================================================
 
-@import "normalize-baseline.scss";
+@import "normalize.scss";
+@import "baseline.scss";
 @import "grid.scss";
 
 // ==========================================================

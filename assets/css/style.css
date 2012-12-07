@@ -81,7 +81,7 @@ del{color:#dddddd;}
 code,kbd,pre,samp{font-family:monospace, serif;line-height:1.5;margin:0 0 1.5em 0;}
 ins,small{line-height:1.5;}
 kbd,samp{line-height:1.4;}
-hr{background:#cccccc;color:#cccccc;clear:both;float:none;width:100%;height:1px;margin:0 0 1.45em;border:none;}
+hr{background:#cccccc;color:#cccccc;clear:both;float:none;width:100%;height:1px;margin:0 0 1.4em;border:none;}
 body{background:url(../images/bg.png) 0 2px;}
 header#worlds_birth>div{*zoom:1;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block;max-width:1008px;margin:0 auto;padding:0 0;}header#worlds_birth>div:before,header#worlds_birth>div:after{content:"";display:table;}
 header#worlds_birth>div:after{clear:both;}
