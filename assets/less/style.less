@@ -17,6 +17,9 @@
 @columns: 12; // The amount of columns you want
 @max_width: 1008px; // Set a maximum width of the site
 
+// Half the gutter for borders, margin, padding etc
+@gutter: @gutter_width*0.5;
+
 /**
  * Baseline
  * 
@@ -127,7 +130,7 @@ header#worlds_birth{
 					background: @green;
 					height: 3em;
 					margin-bottom: 1.5em;
-					border: @gutter_width*0.5 solid #ddd;
+					border: @gutter solid #ddd;
 					border-top:0;
 					border-bottom:0;
 				}
