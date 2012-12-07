@@ -16,7 +16,7 @@
 @correction: 0.5 / @max_width * 100 * 1%; // NOTE: Check this in IE
 
 /* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
-.grid-clearfix(){
+.clearfix(){
 	*zoom:1;
 	
 	&:before,
@@ -38,7 +38,7 @@
 
 /* Our row container */
 .row(@padding:0){
-	.grid-clearfix();
+	.clearfix();
 	.border-box();
 
 	display:block;
