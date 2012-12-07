@@ -55,7 +55,8 @@
 /* = Import normalize baseline and grid                    = */
 /* ========================================================== */
 
-@import "normalize-baseline.less";
+@import "normalize.less";
+@import "baseline.less";
 @import "grid.less";
 
 /* ========================================================== */
@@ -72,7 +73,7 @@ header#worlds_birth{
 		hgroup{
 			.column(12);
 			padding-top: 1.5em;
-			margin-bottom: 2px; // Figure out 2px weirdness with hgroups
+			//margin-bottom: 2px; // Figure out 2px weirdness with hgroups
 		}
 		nav ul{
 			.grid-clearfix();
@@ -88,6 +89,7 @@ header#worlds_birth{
 					padding: .75em 0;
 					border-right: 1px solid #fff;
 					color:#fff;
+					text-decoration: none;
 					&:hover, &:focus{
 						background:@link_hover;
 					}
