@@ -38,7 +38,7 @@ $padding:$gutter_width*0.5;
 
 	display: inline;
 	float: left;
-	width: 100%*(($x / $columns);
+	width: 100%*($x / $columns);
 	padding: 0 $padding;
 
 	//IE 6 & 7 Fix
