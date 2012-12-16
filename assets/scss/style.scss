@@ -19,13 +19,13 @@ $max_width: 1008px; // Set a maximum width of the site
 
 // *
 // * Baseline
-// * 
+// *
 // * Common settings for this:
-// * 
+// *
 // * 100% for 16px font and 24px baseline.
-// * 
+// *
 // * 75% for 12px font and 18px baseline.
-// * 
+// *
 // *
 $baseline: 100%;
 
@@ -52,9 +52,9 @@ $grey_dark: #666;
 $green: #6bac60;
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack
-@mixin grid-clearfix(){
+@mixin clearfix(){
 	*zoom:1;
-	
+
 	&:before,
 	&:after{
 	    content:"";
@@ -90,7 +90,7 @@ header#worlds_birth{
 			margin-bottom: 2px; // Figure out 2px weirdness with hgroups
 		}
 		nav ul{
-			@include grid-clearfix();
+			@include clearfix();
 			@include column(12);
 			margin-bottom: 1.5em;
 			text-align: center;
@@ -135,7 +135,7 @@ header#worlds_birth{
 				@include column(12);
 			}
 			section{
-				background:#ccc;	
+				background:#ccc;
 				div{
 					background: $green;
 					height: 3em;
@@ -224,7 +224,7 @@ header#worlds_birth{
 /**
  * NOTE
  * Don't add breakpoints aimed at device pixel widths,
- * add them where they suit best for your design. 
+ * add them where they suit best for your design.
  */
 @media screen and (max-width: 750px){
 	#content{

@@ -1,7 +1,7 @@
 // * Grid
 // *
 // * Set up responsive grid system.
-// * 
+// *
 // * This is heavily infleuenced by the Semantic Grid http://semantic.gs
 // *
 // * @author Abban Dunne http://abandon.ie
@@ -16,14 +16,14 @@ $padding:$gutter_width*0.5;
 
 // Ensure grid columns are set to border-boxes. This is essential
 @mixin border-box(){
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 // Our row container
 @mixin row($padding:0){
-	@include grid-clearfix();
+	@include clearfix();
 	@include border-box();
 
 	display:block;
@@ -38,7 +38,7 @@ $padding:$gutter_width*0.5;
 
 	display: inline;
 	float: left;
-	width: 100%*(($x / $columns);
+	width: 100%*($x / $columns);
 	padding: 0 $padding;
 
 	//IE 6 & 7 Fix

@@ -13,9 +13,9 @@
 /* = Box sizing makes life easier                           = */
 /* ========================================================== */
 
-*{ 
-   -webkit-box-sizing: border-box; 
-   -moz-box-sizing: border-box; 
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
    box-sizing: border-box;
 }
 
@@ -164,7 +164,7 @@ form ul{
     margin:0;
     padding:0;
     li{
-        .clearfix();
+        @include clearfix();
         margin-bottom:1.5em;
     }
 }
