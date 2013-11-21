@@ -1,5 +1,5 @@
-Responsable Grid System
-=======================
+Responsable Grid System v1
+==========================
 
 A clean responsive grid system with a typographic baseline powered by
 [LESS][1]/[SCSS][2], based on [Semantic.gs][3].
