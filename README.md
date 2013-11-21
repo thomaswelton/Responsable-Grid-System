@@ -1,4 +1,4 @@
-Responsable Grid System v1
+Responsable Grid System v2
 ==========================
 
 A clean responsive grid system with a typographic baseline powered by SCSS.
