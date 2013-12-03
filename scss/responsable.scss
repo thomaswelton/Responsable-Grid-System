@@ -3,15 +3,17 @@
  *
  * @author Abban Dunne http://abandon.ie
  * @author James Wilson http://jimmynotjim.com
- * @version 2.0.0
+ * @version 2.1.0
  */
 
 @import "clearfix.scss";
 @import "border-box.scss";
 
+// Set up some default variables
 $columns: 12 !default;
 $gutter_width: 24px !default;
 $max_width: 1024px !default;
+$site_align: center !default;
 
 // Utility variable — you should never need to modify this
 $gridsystem_width: $columns * 1px;
@@ -25,8 +27,11 @@ $padding: $gutter_width * 0.5;
 
     display:block;
     max-width: $max_width;
-    margin: 0 auto;
     padding:0 $padding;
+
+    @if $site_align == left { margin: 0; }
+    @else if $site_align == right { margin: 0 0 0 auto; }
+    @else { margin: 0 auto; }
 }
 
 // Our column container

@@ -1,6 +1,6 @@
 {
     "name":  "Responsable-Grid-System",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "main": "./scss/responsable.scss",
     "author": "Abban Dunne",
     "homepage": "http://responsablecss.com/",
