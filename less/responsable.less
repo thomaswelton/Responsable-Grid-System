@@ -20,10 +20,10 @@
 @padding: @gutter_width * 0.5;
 
 // Our row container
-@mixin row(@padding:0)
+.row(@padding:0)
 {
-    @include clearfix();
-    @include border-box();
+    .clearfix();
+    .border-box();
 
     display:block;
     max-width: @max_width;
@@ -32,9 +32,9 @@
 }
 
 // Our column container
-@mixin column(@x, @padding:@padding, @columns:@columns)
+.column(@x, @padding:@padding, @columns:@columns)
 {
-    @include border-box();
+    .border-box();
 
     display: inline;
     float: left;
@@ -43,13 +43,13 @@
 }
 
 // Push adds left padding
-@mixin push(@offset:1, @columns:@columns)
+.push(@offset:1, @columns:@columns)
 {
     margin-left: 100% * (@offset / @columns);
 }
 
 // Pull adds right padding
-@mixin pull(@offset:1, @columns:@columns)
+.pull(@offset:1, @columns:@columns)
 {
     margin-right: 100% * (@offset / @columns);
 }
